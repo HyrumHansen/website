@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications — Hyrum Hansen</title>
+  <meta name="description" content="Selected publications by Hyrum Hansen in statistics, nuclear safeguards, and nonproliferation." />
+  <!-- EDIT: replace with your real domain once deployed -->
+  <link rel="canonical" href="https://yourdomain.com/publications.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Publications — Hyrum Hansen" />
+  <meta property="og:description" content="Selected publications by Hyrum Hansen in statistics, nuclear safeguards, and nonproliferation." />
+  <meta property="og:url" content="https://yourdomain.com/publications.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="nav-row">
+      <a class="wordmark" href="index.html">Hyrum Hansen</a>
+      <nav class="primary" aria-label="Main">
+        <a href="index.html">About</a>
+        <a href="publications.html" aria-current="page">Publications</a>
+        <a href="personal.html">Personal</a>
+      </nav>
+    </div>
+  </div>
+  <svg class="contours" viewBox="0 0 1200 120" fill="none" stroke="currentColor"
+       stroke-width="1" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,90 C150,70 260,110 420,88 C580,66 700,104 860,84 C1010,66 1110,96 1200,80" />
+    <path d="M0,70 C160,52 280,88 440,68 C600,48 720,84 880,64 C1030,46 1120,72 1200,60" opacity="0.7" />
+    <path d="M0,50 C170,36 300,64 460,48 C620,32 740,62 900,44 C1040,28 1130,50 1200,40" opacity="0.45" />
+    <path d="M0,30 C180,20 320,42 480,30 C640,18 760,40 920,26 C1050,14 1140,30 1200,22" opacity="0.25" />
+  </svg>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <h1>Publications</h1>
+    <p class="role">Selected first-author publications</p>
+  </div>
+
+  <!-- ==================================================================
+       To add a publication, copy one <article class="pub"> block and
+       edit the fields. Entries appear in the order they're written here.
+       ================================================================== -->
+
+  <article class="pub">
+    <!-- EDIT: journal or venue · year -->
+    <p class="meta">Algorithms · 2025</p>
+    <!-- EDIT: paper title -->
+    <h3>Variance Preserving Spectral Subsampling</h3>
+    <p>
+      Gamma-ray spectra provide a highly informative data stream in nuclear safeguards,
+      communicating the isotopic composition of an assayed sample without destroying the sample itself. 
+      To justify the use of a particular gamma detector, sensitivity 
+      studies are often required. This involves partitioning a spectrum
+      until an isotope is barely&mdash;but still significantly&mdash;identifiable. To aid 
+      in performing these so-called "limit of detection" studies, this work evaluates 
+      common partitioning techniques, highlights critical shortcomings of several common
+      methods, and justifies the most defensible approach.
+    </p>
+    <p class="links">
+      <!-- EDIT: links; delete any you don't have -->
+      <a href="https://doi.org/10.3390/a19010025"></a>
+    </p>
+    <figure class="pub-figure">
+      <img src="images/var_pres_paper.png" alt="Parent spectrum and sparse region counts">
+      <!-- EDIT: caption text -->
+      <figcaption>A parent gamma-ray spectrum (left) alongside a visualization of the counts by channel
+                  in a sparse, flat region (right). This region is well-controlled, and offers a principled
+                  way to assess variance preservation when subsampling spectra.
+    </figcaption>
+    </figure>
+  </article>
+
+  <article class="pub">
+    <p class="meta">Quality and Reliability Engineering International · 2024</p>
+    <h3>A Non-Approximate Method for Generating <i>G</i>-Optimal RSM Designs</h3>
+    <p>
+      Optimal experimental designs are a powerful inference tool, allowing
+      researchers to "design for the experiment" rather than "experiment for the design."
+      Kristine Smith introduced the concept of optimal experimental designs in 1918, analytically 
+      deriving designs that minimize worst-case scenario prediction variance under a first-order 
+      linear model. These designs would become known <i>G</i>-optimal designs. By fusing several 
+      sophisticated computational tools into a single unified workflow, this work presents the first 
+      non-approximate solution to the problem posed by Kristine Smith way back in 1918.
+    </p>
+    <p class="links">
+      <a href="https://doi.org/10.1002/qre.3660"></a>
+    </p>
+    <figure class="pub-figure">
+      <img src="images/g_opt_paper.png" alt="G-optimal design comparison plot">
+      <!-- EDIT: caption text -->
+      <figcaption>Three surfaces that must be correctly optimized to find the <i>G</i>-optimal design.
+                  The presence of many optima for each design illustrates an issue with many optimization 
+                  techniques used for this task: entrapment in local optima is likely.
+    </figcaption>
+    </figure>
+  </article>
+
+</main>
+
+<script>
+  document.querySelectorAll('article.pub').forEach((article) => {
+    const link = article.querySelector('.links a');
+    if (!link) return;
+    article.classList.add('pub--clickable');
+    article.tabIndex = 0;
+    article.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return;
+      if (window.getSelection().toString()) return;
+      window.location.href = link.href;
+    });
+    article.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.target.closest('a')) {
+        window.location.href = link.href;
+      }
+    });
+  });
+</script>
+
+<footer class="site">
+  <div class="wrap nav-row">
+    <span>© 2026 Hyrum Hansen</span>
+    <span>Los Alamos, New Mexico</span>
+  </div>
+</footer>
+
+</body>
+</html>
