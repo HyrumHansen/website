@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- EDIT: replace yourdomain.com with your real domain once deployed -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yourdomain.com/</loc>
+    <loc>https://hyrum-hansen.com/</loc>
   </url>
   <url>
-    <loc>https://yourdomain.com/publications.html</loc>
+    <loc>https://hyrum-hansen.com/publications.html</loc>
   </url>
   <url>
-    <loc>https://yourdomain.com/personal.html</loc>
+    <loc>https://hyrum-hansen.com/personal.html</loc>
   </url>
 </urlset>

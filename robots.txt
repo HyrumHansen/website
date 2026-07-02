@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# EDIT: replace yourdomain.com with your real domain once deployed
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://hyrum-hansen.com/sitemap.xml
