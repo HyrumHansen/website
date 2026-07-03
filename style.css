@@ -258,13 +258,14 @@ a:hover { color: var(--accent); }
 .timeline > li::before {
   content: "";
   position: absolute;
-  left: -1.65rem;
-  top: 0.4rem;
-  width: 0.7rem;
-  height: 0.7rem;
+  left: -1.875rem;
+  top: 0.75rem;
+  width: 0.625rem;
+  height: 0.625rem;
   border-radius: 50%;
-  background: var(--accent);
-  border: 2px solid var(--paper);
+  background: var(--paper);
+  border: 2px solid var(--accent);
+  transform: translateY(-50%);
 }
 
 .timeline h3 {
